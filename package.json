@@ -1,0 +1,33 @@
+{
+  "name": "activity-ranking-api-tests",
+  "version": "1.0.0",
+  "description": "Comprehensive test framework for Activity Ranking API with BDD, automated tests, and manual procedures",
+  "main": "dist/src/ActivityRankingService.js",
+  "scripts": {
+    "test": "npm run test:cucumber",
+    "test:cucumber": "cucumber-js features/**/*.feature --require tests/steps.ts --require-module ts-node/register --format progress-bar",
+    "test:debug": "DEBUG=* npm run test:cucumber",
+    "build": "tsc",
+    "clean": "rm -rf dist test-results",
+    "prebuild": "npm run clean"
+  },
+  "keywords": [
+    "bdd",
+    "cucumber",
+    "playwright",
+    "testing",
+    "api",
+    "weather",
+    "activity-ranking"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
